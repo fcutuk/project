@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+
+    public function up()
+    {
+        Schema::create('problem', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('type_of_problem')->constrained();
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('title');
+            $table->string('description');
+            $table->string('image');
+            $table->string('location');
+            $table->integer('votes');
+            $table->boolean('urgent');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('_problem');
+    }
+};
