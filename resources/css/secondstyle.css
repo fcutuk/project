@@ -20,7 +20,7 @@
 .left-side {
     height: 330px;
     color: white;
-    
+
 }
 .middle{
     color: white;
@@ -29,7 +29,7 @@
     margin: 38px;
     text-align: center;
     color: white;
-    
+
 }
 
 .middle p {
@@ -38,17 +38,35 @@
     margin-right: 38px;
     color: white;
 }
-
-.middle .buttons {
-    justify-content: space-around;
-    display: flex;
-    margin-left: 40px;
-    margin-left: 39px;
-    width: 82%;
-    margin-top: 130px;
+.buttons {
+    width: 150px;
+    height: 150px;
+    margin-left: 350px;
+    margin-top: 30px;
 }
 .buttons button{
-    width: 80px;
-height: 42px;
-border-radius: 25px;
+    border-radius: 25px;
+    width: 200px;
+    height: 100px;
+}
+
+button:hover{
+    background-color: #009949;
+}
+.flex-container {
+    margin-top: 15px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    display: flex;
+    margin-right: 150px;
+    border: solid red 2px;
+    border-radius: 10px;
+    height: 282px;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
 }

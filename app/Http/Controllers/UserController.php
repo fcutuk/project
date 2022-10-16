@@ -19,7 +19,7 @@ class UserController extends Controller
                                    FROM users u, problem p, problem_type pt
                                    WHERE u.JMBG = p.user_id AND p.type_of_problem = pt.id');
 
-        return view('dashboard')->with('posts', $posts);
+        return view('index')->with('posts', $posts);
     }
 
     /**
